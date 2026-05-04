@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Diávola | Artisanal Pizza</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600;700&family=Be+Vietnam+Pro:wght@400;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+                primary: "#e31b23",
+                background: "#0A0A0A",
+                surface: "#131313",
+                'surface-container': "#1c1b1b",
+            },
+            fontFamily: {
+                serif: ["Noto Serif", "serif"],
+                sans: ["Be Vietnam Pro", "sans-serif"],
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+        body {
+            background-color: #0A0A0A;
+            color: #e5e2e1;
+            scroll-behavior: smooth;
+        }
+        .grainy-bg {
+            background-image: linear-gradient(to bottom, rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.9)), url("https://www.transparenttextures.com/patterns/60-lines.png");
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(227, 27, 35, 0.5);
+        }
+        .pizza-card:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased grainy-bg">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 bg-black/60 backdrop-blur-lg border-b border-white/5">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-6 md:px-12 py-5">
+            <div class="text-2xl font-black tracking-tighter text-primary italic font-serif">DIÁVOLA</div>
+            
+            <div class="hidden md:flex gap-10 font-serif text-[10px] tracking-[0.25em] uppercase items-center font-semibold">
+                <a class="text-primary hover:text-white transition-colors duration-300" href="#story">Our Story</a>
+                <a class="text-neutral-400 hover:text-white transition-colors duration-300" href="#menu">The Menu</a>
+                <a class="text-neutral-400 hover:text-white transition-colors duration-300" href="#secret">The Secret</a>
+                <a class="text-neutral-400 hover:text-white transition-colors duration-300" href="#location">Location</a>
+            </div>
+
+            <div class="flex items-center gap-6">
+                <div class="text-neutral-400 hover:text-white cursor-pointer transition-colors">
+                    <span class="material-symbols-outlined scale-90">shopping_bag</span>
+                </div>
+                <button class="bg-primary text-white px-6 py-2.5 text-[10px] font-bold uppercase tracking-widest hover:bg-red-700 transition-all active:scale-95">
+                    Order Now
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img class="w-full h-full object-cover brightness-50" alt="Wood fired oven" src="https://images.unsplash.com/photo-1541745537411-b8046dc6d66c?auto=format&fit=crop&q=80&w=2000"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-6 max-w-4xl">
+            <h1 class="font-serif text-5xl md:text-8xl font-bold text-white mb-8 tracking-tight text-glow">
+                EL ARTE DEL FUEGO
+            </h1>
+            <p class="text-lg md:text-xl text-neutral-300 mb-12 max-w-2xl mx-auto leading-relaxed">
+                Pizzas artesanales de fermentación lenta, preparadas con técnicas tradicionales y listas para revivir la experiencia gourmet en tu propia casa.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-5 justify-center">
+                <button class="bg-primary text-white px-12 py-5 font-bold text-xs uppercase tracking-[0.2em] border border-primary hover:bg-transparent transition-all duration-300">
+                    Ver Menú
+                </button>
+                <button class="bg-transparent text-white px-12 py-5 font-bold text-xs uppercase tracking-[0.2em] border border-white/20 hover:border-primary transition-all duration-300">
+                    Conócenos
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section Story -->
+    <section id="story" class="py-32 px-6 md:px-12 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+        <div class="relative">
+            <div class="absolute -top-6 -left-6 w-32 h-32 border-t border-l border-primary/40"></div>
+            <img class="w-full aspect-[4/5] object-cover grayscale hover:grayscale-0 transition-all duration-1000 shadow-2xl rounded-sm" alt="Chef kneading dough" src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=1000"/>
+        </div>
+        
+        <div class="space-y-10">
+            <span class="text-primary font-bold text-xs tracking-[0.4em] uppercase block">Tradición & Rebelión</span>
+            <h2 class="font-serif text-4xl md:text-6xl font-semibold leading-tight text-white">Pasión por lo artesanal.</h2>
+            <p class="text-lg text-neutral-400 max-w-md leading-relaxed">
+                Inspiración italiana, corazón local. En Diávola no solo hacemos pizza; rendimos culto al proceso. Cada masa es tratada como una obra de arte, respetando los tiempos que la naturaleza dicta.
+            </p>
+            <div class="grid grid-cols-2 gap-4 pt-4">
+                <img class="w-full aspect-[4/3] object-cover grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition duration-700 rounded-sm" alt="Ingredients" src="https://images.unsplash.com/photo-1574071318508-1cdbad80ad50?auto=format&fit=crop&q=80&w=500"/>
+                <img class="w-full aspect-[4/3] object-cover grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition duration-700 rounded-sm" alt="Dough" src="https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?auto=format&fit=crop&q=80&w=500"/>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Stars -->
+    <section id="menu" class="py-32 bg-surface-container/30">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-6">
+                <div>
+                    <h2 class="font-serif text-4xl md:text-6xl font-semibold text-white mb-4">The Stars</h2>
+                    <p class="text-neutral-500 text-lg">Nuestras creaciones más icónicas.</p>
+                </div>
+                <a class="text-primary font-bold text-xs tracking-[0.2em] border-b border-primary/30 pb-2 hover:border-primary transition-all uppercase" href="#">Full Menu</a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Pizza 1 -->
+                <div class="pizza-card group bg-black/40 border border-white/5 p-6 hover:border-primary/20 transition-all duration-500">
+                    <div class="overflow-hidden mb-8 aspect-square rounded-sm">
+                        <img class="w-full h-full object-cover transition-transform duration-1000" alt="Diavola Pizza" src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?auto=format&fit=crop&q=80&w=800"/>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold mb-3 uppercase tracking-tight text-white">Diavola</h3>
+                            <p class="text-neutral-500 text-sm leading-relaxed max-w-[200px]">Pomodoro, Mozzarella, Salame Piccante, Peperoncino.</p>
+                        </div>
+                        <span class="text-primary font-serif text-2xl font-bold">$18.50</span>
+                    </div>
+                </div>
+
+                <!-- Pizza 2 -->
+                <div class="pizza-card group bg-black/40 border border-white/5 p-6 hover:border-primary/20 transition-all duration-500">
+                    <div class="overflow-hidden mb-8 aspect-square rounded-sm">
+                        <img class="w-full h-full object-cover transition-transform duration-1000" alt="Margherita Pizza" src="https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?auto=format&fit=crop&q=80&w=800"/>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold mb-3 uppercase tracking-tight text-white">Margherita</h3>
+                            <p class="text-neutral-500 text-sm leading-relaxed max-w-[200px]">Pomodoro San Marzano, Mozzarella di Bufala, Albahaca.</p>
+                        </div>
+                        <span class="text-primary font-serif text-2xl font-bold">$15.00</span>
+                    </div>
+                </div>
+
+                <!-- Pizza 3 -->
+                <div class="pizza-card group bg-black/40 border border-white/5 p-6 hover:border-primary/20 transition-all duration-500">
+                    <div class="overflow-hidden mb-8 aspect-square rounded-sm">
+                        <img class="w-full h-full object-cover transition-transform duration-1000" alt="Tartufo Pizza" src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=800"/>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold mb-3 uppercase tracking-tight text-white">Tartufo</h3>
+                            <p class="text-neutral-500 text-sm leading-relaxed max-w-[200px]">Crema de Trufa, Champiñones Silvestres, Parmigiano.</p>
+                        </div>
+                        <span class="text-primary font-serif text-2xl font-bold">$22.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Secret -->
+    <section id="secret" class="relative min-h-[80vh] flex items-center py-20">
+        <div class="absolute inset-0 z-0">
+            <img class="w-full h-full object-cover grayscale" alt="Crust detail" src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&q=80&w=2000"/>
+            <div class="absolute inset-0 bg-black/80"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full text-center">
+            <span class="text-primary font-bold text-xs tracking-[0.5em] uppercase mb-10 block">The Secret</span>
+            <h2 class="font-serif text-5xl md:text-8xl font-bold text-white mb-12 tracking-tight">48 Horas de Fermentación</h2>
+            <p class="font-serif text-xl md:text-3xl text-neutral-400 max-w-3xl mx-auto border-y border-white/10 py-12 italic leading-relaxed">
+                "El secreto no está en los ingredientes, sino en la paciencia. Dejamos que el tiempo haga su magia para lograr una masa ligera, aireada y con un sabor inconfundible."
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section id="location" class="py-40 px-6 md:px-12">
+        <div class="max-w-5xl mx-auto bg-surface p-12 md:p-32 text-center border border-white/5 relative overflow-hidden rounded-sm">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-primary/5 blur-[120px] rounded-full -mr-48 -mt-48"></div>
+            
+            <div class="relative z-10">
+                <h2 class="font-serif text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">¿Hambre de algo auténtico?</h2>
+                <p class="text-neutral-400 text-lg mb-16 uppercase tracking-[0.2em] font-medium">Estilo Napolitano | Listas en minutos</p>
+                
+                <div class="flex flex-col items-center gap-8">
+                    <button class="bg-primary text-white px-16 py-7 font-bold text-xs uppercase tracking-widest flex items-center gap-4 hover:bg-red-700 hover:scale-105 transition-all shadow-xl">
+                        ORDENAR POR WHATSAPP
+                        <span class="material-symbols-outlined text-lg">send</span>
+                    </button>
+                    <p class="text-[10px] font-bold tracking-[0.3em] uppercase text-neutral-500">Envíos de 18:00 a 22:00 hs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black w-full border-t border-white/5 py-16">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center px-10 gap-12">
+            <div class="text-2xl font-black text-primary font-serif italic tracking-tighter">DIÁVOLA</div>
+            
+            <div class="font-serif text-[10px] tracking-[0.2em] uppercase text-neutral-600 text-center font-bold">
+                © 2024 DIÁVOLA ARTISANAL PIZZA. EL ARTE DEL FUEGO.
+            </div>
+            
+            <div class="flex gap-10 font-serif text-[10px] tracking-[0.2em] uppercase font-bold">
+                <a class="text-neutral-400 hover:text-primary transition-colors" href="#">Privacy</a>
+                <a class="text-neutral-400 hover:text-primary transition-colors" href="#">Terms</a>
+                <a class="text-neutral-400 hover:text-primary transition-colors" href="#">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
